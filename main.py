@@ -31,7 +31,7 @@ def getDistance(origin: str, destination: str):
 def getWaypointsDistance(waypoints: set):
     url = f"https://routes.googleapis.com/distanceMatrix/v2:computeRouteMatrix"
 
-    waypointsList = [{"waypoint": {"address": place}} for place in places]
+    waypointsList = [{"waypoint": {"address": waypoint}} for waypoint in waypoints]
     obj = {
         "origins": waypointsList,
         "destinations": waypointsList,
